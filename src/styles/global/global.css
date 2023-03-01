@@ -168,19 +168,19 @@ pre {
 
 footer {
   margin-block-start: var(--space-xl-2xl);
-  display: table;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center; 
-  padding-bottom: 5%;      /* Footer height */
+  padding: 0px 30px 30px 30px;
+  position: relative;
   font-size: smaller;
-  background-image: linear-gradient(45deg, rgb(206, 192, 192);), #da62c4 30%, white 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom{
+  margin: 0 auto;
+  width: 100%;
+  position: absolute; 
+  bottom: 0px; 
 }
 
 :root {
