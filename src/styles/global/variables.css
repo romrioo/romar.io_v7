@@ -81,4 +81,9 @@
   /* Custom pairs */
 
   --space-l-2xl: clamp(2rem, calc(1.07rem + 4.66vw), 5rem);
+
+  /* fancy color */
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+
 }
