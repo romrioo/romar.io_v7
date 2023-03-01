@@ -11,7 +11,7 @@ import Typewriter from "~/components/typewriter.astro";
       <h1><span class="waving-hand">👋</span>welcome</h1>
         <h2> my name is Romario and I am a software
           <!-- <span class="text-gradient ">developer</span> -->
-        <span id="app" class="text-gradient h2">developer</span>
+        <span id="app" class="text-gradient bold">developer</span>
         </h2>
         <script>
           new Typewriter('#typewriter', {
@@ -22,7 +22,7 @@ import Typewriter from "~/components/typewriter.astro";
 
       
     </article>
-    <Typewriter>dadfa</Typewriter>
+    <Typewriter></Typewriter>
 
     <article class="region prose wrapper">
       <ul role="list" class="grid features">
@@ -38,25 +38,6 @@ import Typewriter from "~/components/typewriter.astro";
 </Layout>
 
 <style>
-  /* .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid;
-    width: 0;
-    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
-  }
-    
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-  @keyframes blinking {
-    0% {border-right-color: transparent}
-    50% {border-right-color: black}
-    100% {border-right-color: transparent}
-  } */
-
   .waving-hand {
     animation-iteration-count: 4;
     animation-delay: 15s;
@@ -84,6 +65,10 @@ import Typewriter from "~/components/typewriter.astro";
 		background-size: 400%;
 		background-position: 0%;
 	}
+
+  .bold {
+    font-weight: bold;
+  }
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
