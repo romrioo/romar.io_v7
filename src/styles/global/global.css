@@ -168,6 +168,15 @@ pre {
 
 footer {
   margin-block-start: var(--space-xl-2xl);
+  display:flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  justify-content:center;
+  align-items:center;
 }
 
 :root {

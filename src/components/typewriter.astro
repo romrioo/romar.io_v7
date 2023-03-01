@@ -1,0 +1,17 @@
+<script>
+var app = document.getElementById('app');
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('developer!')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('engineer!')
+    .pauseFor(2500)
+    .deleteAll()
+    // .deleteChars(7)
+    .typeString('<strong>enthusiast.</strong>')
+    .pauseFor(2500)
+    .start();
+</script>

@@ -1,17 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Typewriter from "~/components/typewriter.astro";
 ---
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
 <Layout title="Romario Jashari">
   <main>
     <article class="region prose wrapper hero">
-      <h1>👋 welcome</h1>
+      
+      <h1><span class="waving-hand">👋</span>welcome</h1>
+        <h2> my name is Romario and I am a software
+          <!-- <span class="text-gradient ">developer</span> -->
+        <span id="app" class="text-gradient h2">developer</span>
+        <script>
+          new Typewriter('#typewriter', {
+            strings: ['Hello', 'World'],
+            autoStart: true,
+          });
+        </script>
 
-      <h2>
-       my name is Romario and I am a full-stack software <span class="text-gradient">developer</span> 
-       <!-- <ahref="https://cube.fyi/">CUBE CSS</a> -->
-      </h2>
+      
     </article>
+    <Typewriter>dadfa</Typewriter>
 
     <article class="region prose wrapper">
       <ul role="list" class="grid features">
@@ -20,14 +30,52 @@ import Layout from '../layouts/Layout.astro';
     </article>
 
     <footer class="region prose wrapper">
-      twentytwentythree <span role="img" aria-label="waving hand emoji"
-        >2️⃣0️⃣2️⃣3️⃣</span
-      >
+      <p>Last updated February / <span role="img" aria-label="waving hand emoji"
+        >2️⃣0️⃣2️⃣3️⃣</span></p>
     </footer>
   </main>
 </Layout>
 
 <style>
+  /* .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+  }
+    
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: black}
+    100% {border-right-color: transparent}
+  } */
+
+  .waving-hand {
+    animation-iteration-count: 4;
+    animation-delay: 15s;
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    30% { transform: rotate(-8.0deg) }
+    40% { transform: rotate(14.0deg) }
+    50% { transform: rotate(-4.0deg) }
+    60% { transform: rotate(10.0deg) }
+    70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
