@@ -1,0 +1,10 @@
+---
+
+const resumejsonapi = 'https://raw.githubusercontent.com/romrioo/resume/main/resume.json';
+const response = await fetch(resumejsonapi);
+const resume = await response.json();
+console.log(resume['basics']['name'])
+console.log(resume['basics'])
+---
+
+<h2> {resume['basics']['name']} </h2>
