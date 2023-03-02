@@ -1,6 +1,5 @@
 ---
 import '~/styles/styles.css';
-import Layout from '../layouts/Layout.astro';
 import Download from '../components/Download.astro';
 
 type Props = {
@@ -14,35 +13,62 @@ type Props = {
 
 const { title, pdfLink, noIndex, description } = Astro.props.frontmatter;
 
-const initials = title
-  .split(' ')
-  .map((word) => word[0].toUpperCase())
-  .slice(0, 2);
-
+// SEO stuff
+const ogImage = 'images/screenshot.png'; 
 ---
+<!DOCTYPE html>
+<!-- Remove the hard-coded dark mode and implement your own if you're into that sort of thing -->
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="theme-color" content="#9EA3FA" />
+    <meta name="generator" content={Astro.generator} />
 
-<Layout title="Resume">
-  <main>
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:title" content={title} />
+    <meta name="description" content={description || title} />
+    {noIndex && <meta name="robots" content="noindex" />}
 
-    <article class="region prose wrapper">
-      {
-        pdfLink && (
-          <div class="not-prose absolute right-4 top-4">
-            <Download href={pdfLink} />
-          </div>
-        )
-      }
-      <div class="flex h-fit select-none flex-col items-center"
-      >
-        <span>{initials[0]}</span>
-        <span>{initials[1]}</span>
-      </div>
-      <slot />
-    </article>
+    <title>{title}</title>
 
+    <!-- preload fonts -->
 
-    <footer class="region prose wrapper">
-      <p>Resume Last updated February / <span class="text-gradient footer-style">2023</span></p>
-    </footer>
-  </main>
-</Layout>
+    <link
+      rel="preload"
+      href="/fonts/SilkSerif-ExtraLight.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/fonts/SilkSerif-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <main>
+
+      <article class="region prose wrapper">
+        {
+          pdfLink && (
+            <div class="not-prose absolute right-4 top-4">
+              <Download href={pdfLink} />
+            </div>
+          )
+        }
+  
+        <slot />
+      </article>
+  
+  
+      <footer class="region prose wrapper">
+        <p>Resume Last updated February / <span class="text-gradient footer-style">2023</span></p>
+      </footer>
+    </main>
+  </body>
+</html>
