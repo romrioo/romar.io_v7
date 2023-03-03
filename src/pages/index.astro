@@ -1,88 +1,112 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Typewriter from "../components/typewriter.astro";
+import Typewriter from '../components/typewriter.astro';
 ---
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<!-- blocking script to prevent flash of unwanted theme, ensuring that the right preference is loaded straight away -->
 <Layout title="Romario Jashari">
   <main>
     <article class="region prose wrapper hero">
-      
       <h1><span class="waving-hand">👋</span>welcome</h1>
-        <h2> my name is Romario and I am a software
+      <h2>
+        my name is Romario and I am a software
         <span id="app" class="text-gradient bold">developer</span>
-        </h2>
-
+      </h2>
     </article>
-    <Typewriter></Typewriter>
+    <Typewriter />
 
     <article class="region prose wrapper">
-      <ul role="list" class="grid features">
-
-      </ul>
+      <ul role="list" class="grid features"></ul>
     </article>
 
     <footer class="region prose wrapper">
-      <p>🙈🙉🙊 Last updated February / <span class="text-gradient footer-style">2023</span></p>
+      <p>
+        🙈🙉🙊 Last updated February / <span class="text-gradient footer-style"
+          >2023</span
+        >
+      </p>
     </footer>
+    <article class="cluster middle">
+      <a href="https://www.buymeacoffee.com/jashari" target="_blank" class="btn-main"
+        ><img
+          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jashari&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
+        /></a
+      >
+    </article>
+
+    
   </main>
 </Layout>
 
 <style>
+  .btn-main {
+      display: inline-block;
+      transition: .2s;
+  }
+  .btn-main:hover,
+  .btn-main:focus {
+      transform: scale(.9);
+  }
   .waving-hand {
-    animation-iteration-count: 4;
-    animation-delay: 15s;
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-iteration-count: 2;
+    animation-delay: 3s;
     animation-name: wave-animation;
     animation-duration: 2.5s;
     transform-origin: 70% 70%;
     display: inline-block;
   }
+  .waving-hand:hover {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-name: wave-animation;
+    animation-duration: 0.75s;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
 
   @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-    15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-    30% { transform: rotate(-8.0deg) }
-    40% { transform: rotate(14.0deg) }
-    50% { transform: rotate(-4.0deg) }
-    60% { transform: rotate(10.0deg) }
-    70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    30% {
+      transform: rotate(-8deg);
+    }
+    40% {
+      transform: rotate(14deg);
+    }
+    50% {
+      transform: rotate(-4deg);
+    }
+    60% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
   }
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
- .footer-style {
-    background-image: linear-gradient(45deg, rgb(200, 253, 255), #37b3e0 30%, white 60%);
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
   }
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  .footer-style {
+    background-image: linear-gradient(
+      45deg,
+      rgb(200, 253, 255),
+      #37b3e0 30%,
+      white 60%
+    );
+  }
 </style>

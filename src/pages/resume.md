@@ -1,6 +1,6 @@
 ---
 title: Romario Jashari - Resume
-description: Resume about Richard Hendriks, CEO of Pied Piper.
+description: Resume about Romario Jashari, software engineer.
 layout: ../layouts/Resume.astro
 pdfLink: resume.pdf
 ---
@@ -15,25 +15,22 @@ Richard hails from Tulsa. He has earned degrees from the University of Oklahoma 
 
 ## Work Experience
 
-### [Google](https://www.google.com/)
+### [Freelance]()
 
-#### Senior Software Engineer | Oct 2022 - Current
-
-Elit mollit ipsum fugiat enim labore et non. Amet nulla cupidatat esse est qui magna culpa velit magna excepteur proident Lorem aliquip ullamco. Anim culpa sit cillum enim consectetur aliqua id Lorem aute id id laborum. Sit nostrud ea anim et deserunt cillum sint culpa laboris. Nisi magna amet minim esse dolore. Do officia ipsum duis exercitation incididunt irure pariatur.
-
-#### Software Engineer | Aug 2018 - Oct 2022
-
-Elit mollit ipsum fugiat enim labore et non. Amet nulla cupidatat esse est qui magna culpa velit magna excepteur proident Lorem aliquip ullamco. Anim culpa sit cillum enim consectetur aliqua id Lorem aute id id laborum. Sit nostrud ea anim et deserunt cillum sint culpa laboris. Nisi magna amet minim esse dolore. Do officia ipsum duis exercitation incididunt irure pariatur.
-
-### [Pied Piper](http://piedpiper.com/)
-
-#### CEO/President | Dec 2013 - Dec 2014
+#### Software Engineer | Jan 2023 - Current
 
 Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.
 
 - Build an algorithm for artist to detect if their music was violating copy right infringement laws
 - Successfully won Techcrunch Disrupt
 - Optimized an algorithm that holds the current world record for Weisman Scores
+
+### [Utility Cloud](https://www.utilitycloud.us/)
+
+#### Solutions Engineer | Jan 2022 - Current
+
+Elit mollit ipsum fugiat enim labore et non. Amet nulla cupidatat esse est qui magna culpa velit magna excepteur proident Lorem aliquip ullamco. Anim culpa sit cillum enim consectetur aliqua id Lorem aute id id laborum. Sit nostrud ea anim et deserunt cillum sint culpa laboris. Nisi magna amet minim esse dolore. Do officia ipsum duis exercitation incididunt irure pariatur.
+
 
 ## Projects
 

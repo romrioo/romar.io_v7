@@ -39,6 +39,12 @@
   gap: var(--gutter, var(--space-s-m));
 }
 
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .region {
   padding-top: var(--region-space, var(--space-l-xl));
   padding-bottom: var(--region-space, var(--space-l-xl));
