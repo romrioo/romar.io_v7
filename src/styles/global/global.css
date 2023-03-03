@@ -183,10 +183,20 @@ main:focus {
 }
 
 :focus {
-  outline: var(--outline-size) solid;
-  outline-offset: var(--outline-offset);
-  outline-color: var(--fg-color)
+  /* outline: var(--outline-size) solid; */
+  /* outline-offset: var(--outline-offset); */
+  /* outline-color: var(--fg-color) */
 }
+
+.btn-main{
+  display: inline-block;
+  transition: .2s
+}
+
+.btn-main:hover,.btn-main:focus {
+  transform: scale(.9)
+}
+
 
 main>ul[role=list],header,section,article>*,aside {
   padding-left: env(safe-area-inset-left);
@@ -491,7 +501,7 @@ pre {
   transition-duration: .15s
 }
 
-.skip-link:where(.astro-3EF6KSR2) {
+.skip-link {
   position: absolute;
   top: .5em;
   left: .5em;
@@ -503,33 +513,33 @@ pre {
   color: inherit
 }
 
-.skip-link:where(.astro-3EF6KSR2):active,.skip-link:where(.astro-3EF6KSR2):focus {
+.skip-link:active,.skip-link:focus {
   clip: auto;
   height: auto;
   width: auto;
   overflow: visible
 }
 
-.main-header:where(.astro-3EF6KSR2) {
+.main-header {
   padding-block:var(--space-s-m);column-gap: .25rem
 }
 
-.main-header:where(.astro-3EF6KSR2) a:where(.astro-3EF6KSR2) {
+.main-header a {
   color: currentcolor;
   text-decoration: none
 }
 
-.main-header:where(.astro-3EF6KSR2) a:where(.astro-3EF6KSR2).active {
+.main-header a.active {
   text-decoration: underline;
   text-underline-offset: var(--outline-offset);
   text-decoration-color: var(--accent-color)
 }
 
-.main-header:where(.astro-3EF6KSR2) a:where(.astro-3EF6KSR2):hover {
+.main-header a:hover {
   color: var(--accent-color)
 }
 
-footer:where(.astro-SZ7XMLTE) {
+footer {
   display: grid;
   place-items: center;
   padding-block:var(--space-l-2xl);text-align: center;

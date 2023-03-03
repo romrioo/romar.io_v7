@@ -1,8 +1,6 @@
 ---
 import '~/styles/styles.css';
-import Download from '../components/Download.astro';
-import Navbar from '~/components/Navbar.astro';
-import Footer from './Footer.astro';
+import Layout from './Layout.astro';
 
 type Props = {
   frontmatter: {
@@ -18,48 +16,9 @@ const { title, pdfLink, noIndex, description } = Astro.props.frontmatter;
 // SEO stuff
 const ogImage = 'images/screenshot.png'; 
 ---
-<!DOCTYPE html>
-<!-- Remove the hard-coded dark mode and implement your own if you're into that sort of thing -->
-<html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="theme-color" content="#9EA3FA" />
-    <meta name="generator" content={Astro.generator} />
+<Layout>
+  <article class="region prose wrapper">
 
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:title" content={title} />
-    <meta name="description" content={description || title} />
-    {noIndex && <meta name="robots" content="noindex" />}
-
-    <title>{title}</title>
-
-    <!-- preload fonts -->
-
-    <link
-      rel="preload"
-      href="/fonts/SilkSerif-ExtraLight.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin=""
-    />
-    <link
-      rel="preload"
-      href="/fonts/SilkSerif-Light.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin=""
-    />
-  </head>
-  <body>
-    <main>
-      <article class="region prose wrapper">
-        <Navbar></Navbar>
-  
-        <slot />
-      </article>
-    </main>
-    <Footer></Footer>
-  </body>
-</html>
+    <slot />
+  </article>
+</Layout>

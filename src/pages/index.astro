@@ -1,14 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Typewriter from '../components/typewriter.astro';
-import Navbar from '~/components/Navbar.astro';
 ---
 
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <!-- blocking script to prevent flash of unwanted theme, ensuring that the right preference is loaded straight away -->
 <Layout title="Romario Jashari">
   <main>
-    <article class="region prose wrapper hero astro-J7PV25F6">
+    <article class="region prose wrapper hero astro-999">
       <h1><span class="waving-hand">👋</span>welcome</h1>
       <h2>
         my name is Romario and I am a software
@@ -17,13 +16,13 @@ import Navbar from '~/components/Navbar.astro';
     </article>
     <Typewriter />
 
-    <article class="region prose wrapper astro-J7PV25F6">
+    <article class="region prose wrapper astro-999">
       <ul role="list" class="grid features"></ul>
     </article>
 
-    <article class="wrapper region prose astro-J7PV25F6">
-      <h3 class="astro-J7PV25F6">Crafting user-focused apps</h3><p
-        class="astro-J7PV25F6"
+    <article class="wrapper region prose astro-999">
+      <h3 class="astro-999">Crafting user-focused apps</h3><p
+        class="astro-999"
       >
         I design &amp; build with accessibility and progressive enhancement as a
         baseline to guarantee end-user gets the best possible experience —
@@ -31,49 +30,48 @@ import Navbar from '~/components/Navbar.astro';
       </p>
     </article>
 
-    <article class="wrapper region prose astro-J7PV25F6">
-      <h3 class="astro-J7PV25F6">Things I can do for you</h3><ul
+    <article class="wrapper region prose astro-999">
+      <h3 class="astro-999">Things I can do for you</h3><ul
         role="list"
-        class="grid astro-J7PV25F6"
+        class="grid astro-999"
       >
-        <li class="flow astro-J7PV25F6">
-          <h4 class="astro-J7PV25F6">Custom websites</h4>
+        <li class="flow astro-999">
+          <h4 class="astro-999">Custom websites</h4>
 
-          <p class="astro-J7PV25F6">
+          <p class="astro-999">
             Build an optimized and SEO-friendly landing page, for marketing or
             personal branding.
           </p>
         </li>
 
-        <li class="flow astro-J7PV25F6">
-          <h4 class="astro-J7PV25F6">SaaS/Products</h4>
+        <li class="flow astro-999">
+          <h4 class="astro-999">SaaS/Products</h4>
 
-          <p class="astro-J7PV25F6">
+          <p class="astro-999">
             Build dynamic SPA experiences like onboarding funnels or dashboards.
           </p>
         </li>
 
-        <li class="flow astro-J7PV25F6">
-          <h4 class="astro-J7PV25F6">CMS</h4>
+        <li class="flow astro-999">
+          <h4 class="astro-999">CMS</h4>
 
-          <p class="astro-J7PV25F6">
+          <p class="astro-999">
             Set up a Content Management System (CMS) for your team.
           </p>
         </li>
       </ul>
     </article>
 
-    <article class="wrapper region prose astro-J7PV25F6"
+    <article class="wrapper region prose astro-999"
       id="contact"
-      tabindex="-1"
     >
-      <h3 class="astro-J7PV25F6">Connect</h3><p class="astro-J7PV25F6">
+      <h3 class="astro">Connect</h3><p class="astro-999">
         Got a project in mind? <a
           href="mailto:rxjash@gmail.com"
-          class="astro-J7PV25F6">Drop me an email</a
+          class="astro-999">Drop me an email</a
         > and I'll get back to you as quickly as possible.
       </p>
-      <p class="astro-J7PV25F6">
+      <p class="astro-999">
         If you want to connect, you can reach me on the links below</a
         >, come say hi!
       </p><ul role="list" class="cluster">
@@ -139,87 +137,10 @@ import Navbar from '~/components/Navbar.astro';
       </ul>
     </article>
 
-    <article class="cluster middle">
-      <a
-        href="https://www.buymeacoffee.com/jashari"
-        target="_blank"
-        class="btn-main"
-        ><img
-          src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jashari&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
-        /></a
-      >
+    <br>
+    <br>
+    <article class="cluster middle astro-999">
+      <a href="https://www.buymeacoffee.com/jashari" class="btn-main" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
     </article>
   </main>
 </Layout>
-
-<style>
-  .btn-main {
-    display: inline-block;
-    transition: 0.2s;
-  }
-  .btn-main:hover,
-  .btn-main:focus {
-    transform: scale(0.9);
-  }
-  .waving-hand {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-iteration-count: 2;
-    animation-delay: 3s;
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
-  .waving-hand:hover {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
-    animation-name: wave-animation;
-    animation-duration: 0.75s;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
-
-  @keyframes wave-animation {
-    0% {
-      transform: rotate(0deg);
-    }
-    15% {
-      transform: rotate(14deg);
-    } /* The following five values can be played with to make the waving more or less extreme */
-    30% {
-      transform: rotate(-8deg);
-    }
-    40% {
-      transform: rotate(14deg);
-    }
-    50% {
-      transform: rotate(-4deg);
-    }
-    60% {
-      transform: rotate(10deg);
-    }
-    70% {
-      transform: rotate(0deg);
-    } /* Reset for the last half to pause */
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .footer-style {
-    background-image: linear-gradient(
-      45deg,
-      rgb(200, 253, 255),
-      #37b3e0 30%,
-      white 60%
-    );
-  }
-</style>
