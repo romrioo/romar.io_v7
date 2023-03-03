@@ -1,6 +1,7 @@
 ---
 import '~/styles/styles.css';
 import Download from '../components/Download.astro';
+import Navbar from '~/components/Navbar.astro';
 
 type Props = {
   frontmatter: {
@@ -52,16 +53,8 @@ const ogImage = 'images/screenshot.png';
   </head>
   <body>
     <main>
-
       <article class="region prose wrapper">
-        go back
-        <!-- {
-          pdfLink && (
-            <div class="not-prose absolute right-4 top-4">
-              <Download href={pdfLink} />
-            </div>
-          )
-        } -->
+        <Navbar></Navbar>
   
         <slot />
       </article>
