@@ -2,6 +2,7 @@
 import '~/styles/styles.css';
 import Download from '../components/Download.astro';
 import Navbar from '~/components/Navbar.astro';
+import Footer from './Footer.astro';
 
 type Props = {
   frontmatter: {
@@ -58,11 +59,7 @@ const ogImage = 'images/screenshot.png';
   
         <slot />
       </article>
-  
-  
-      <footer class="region prose wrapper">
-        <p>Resume Last updated February / <span class="text-gradient footer-style">2023</span></p>
-      </footer>
     </main>
+    <Footer></Footer>
   </body>
 </html>
