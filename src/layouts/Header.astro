@@ -22,7 +22,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         viewBox="0 0 24 24"
       >
         <circle
-          class="sun"
+          class="wave"
           cx="12"
           cy="12"
           r="6"
@@ -52,8 +52,8 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <nav role="navigation" class="astro-999">
       <ul role="list" class="cluster astro-999">
         <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-        <a class={currentPath === "resume" ? "active" : ""} href="resume">Resume</a>
-        <a class={currentPath === "contact" ? "active" : ""} href="">Contact</a>
+        <!-- <a class={currentPath === "resume" ? "active" : ""} href="resume">Resume</a> -->
+        <!-- <a class={currentPath === "contact" ? "active" : ""} href="">Contact</a> -->
       </ul>
     </nav>
   </div>
